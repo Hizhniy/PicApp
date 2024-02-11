@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PicApp.Pages"
+             x:Class="PicApp.Pages.LoginPage"
+             NavigationPage.HasNavigationBar="False">    
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" x:Name="stackLayout">
+        <Label Text="PicApp Gallery" FontSize="Title" Padding="30,10,30,10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+        <Label x:Name="loginButton" Text="{x:Static local:LoginPage.LABEL_TEXT}" />
+        <Entry x:Name="pinForEntry" Margin="5, 10" BackgroundColor="Silver" HorizontalTextAlignment="Center" IsPassword="True" Placeholder="4 digits" ClearButtonVisibility="WhileEditing" />
+        <Button x:Name="enterButton" Text="{x:Static local:LoginPage.BUTTON_TEXT}" Clicked="enterButton_Clicked" />
+    </StackLayout>
+</ContentPage>

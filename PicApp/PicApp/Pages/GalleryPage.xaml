@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PicApp.Pages.GalleryPage"
+             Title="PicApp - Your Gallery">
+    <StackLayout>
+        <ListView x:Name="deviceList"
+             HasUnevenRows="True"
+             ItemsSource="{Binding Photos}"
+             ItemSelected="photoList_ItemSelected"
+             Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell
+                       ImageSource="{Binding Image}"
+                       Text="{Binding Name}"
+                       Detail="{Binding Description}"
+                       TextColor="DodgerBlue"
+                       DetailColor="Gray"
+                    />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal" Padding="10,10,10,15" HorizontalOptions="Fill" >
+            <Button Clicked="OpenPhoto" Text="Открыть" HorizontalOptions="FillAndExpand" />
+            <Button Clicked="DeletePhoto" Text="Удалить" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
