@@ -29,9 +29,9 @@ namespace PicApp
             MainPage = new NavigationPage(new LoginPage());
         }
 
-        ///// <summary>
-        ///// Создание Автомаппера для преобразования сущностей
-        ///// </summary>
+        /// <summary>
+        /// Создание Автомаппера для преобразования сущностей
+        /// </summary>
         public static IMapper CreateMapper()
         {
             var config = new MapperConfiguration(cfg =>
